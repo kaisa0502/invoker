@@ -12,23 +12,10 @@
 
 - (NSString *)echo:(XYCommandVO *)vo
 {
-    NSMutableString *str = [@"log -b" mutableCopy];
-    if (vo.datas.count > 0)
-        [str appendFormat:@" %@", vo.datas[0]];
-
-    return str;
+    return @"-b";
 }
 
-- (BOOL)isOperate:(XYCommandVO *)vo
-{
-    if (vo.params.count != 1) return NO;
-    
-    if (![vo.params containsObject:@"-b"]) return NO;
-    
-    return YES;
-}
-
-- (NSString *)operateParam
++ (NSString *)operateParam
 {
     return @"-b";
 }

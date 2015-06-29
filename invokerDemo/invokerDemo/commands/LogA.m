@@ -12,10 +12,10 @@
 
 - (NSString *)echo:(XYCommandVO *)vo
 {
-    return @"log -a";
+    return @"-a";
 }
 
-- (NSString *)operateParam
++ (NSString *)operateParam
 {
     return @"-a";
 }

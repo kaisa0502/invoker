@@ -30,7 +30,7 @@
     return YES;
 }
 
-- (NSString *)operateParam
++ (NSString *)operateParam
 {
     return @"...";
 }
@@ -43,22 +43,30 @@
 #pragma mark - private
 - (NSString *)handleMessage:(XYCommandVO *)vo
 {
-    NSString *result = @"";
+    NSMutableString *result = [@"" mutableCopy];
     
-    if (self.enabled && ([vo.params containsObject:[self operateParam]] || [[self operateParam] isEqualToString:@"..."]))
+    if ([self commandEnabled:vo])
     {
-        result = [self echo:vo];
+        [result appendString:[self echo:vo]];
     }
     
     if (self.nextOperator)
     {
-        result = [self.nextOperator handleMessage:vo];
-        return result;
+        NSString *str = [self.nextOperator handleMessage:vo];
+        [result appendString:str];
     }
-    
-    result = @"error";
     
     return result;
 }
 
+- (BOOL)commandEnabled:(XYCommandVO *)vo
+{
+    if (!self.enabled)
+        return NO;
+    
+    if ([[[self class] operateParam] isEqualToString:@"..."])
+        return YES;
+    
+    return ([vo.params containsObject:[[self class] operateParam]]);
+}
 @end

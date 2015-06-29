@@ -11,7 +11,6 @@
 @interface XYCommandVO : NSObject
 
 @property (nonatomic, copy, readonly) NSString *name;
-@property (nonatomic, copy, readonly) Class classType;
 @property (nonatomic, strong, readonly) NSSet *params;
 @property (nonatomic, strong, readonly) NSArray *datas;
 

@@ -27,9 +27,4 @@
     return str;
 }
 
-- (BOOL)isOperate:(XYCommandVO *)vo
-{
-    return YES;
-}
-
 @end

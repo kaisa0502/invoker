@@ -11,7 +11,7 @@
 
 @protocol XYCommandParam <NSObject>
 + (NSString *)name;
-- (NSString *)operateParam;
++ (NSString *)operateParam;
 @end
 
 @protocol XYCommand <NSObject>
