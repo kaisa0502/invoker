@@ -7,7 +7,8 @@
 //
 
 #import "AbstractPrint.h"
+#import "XYCommandLine.h"
 
-@interface Print : AbstractPrint <XYCommand>
+@interface Print : XYCommandLine <XYCommand>
 
 @end

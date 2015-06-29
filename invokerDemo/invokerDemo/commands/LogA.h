@@ -8,6 +8,6 @@
 
 #import "AbstractLog.h"
 
-@interface LogA : AbstractLog <XYCommand>
+@interface LogA : AbstractLog <XYCommandParam>
 
 @end

@@ -28,4 +28,9 @@
     return YES;
 }
 
+- (NSString *)operateParam
+{
+    return @"-b";
+}
+
 @end

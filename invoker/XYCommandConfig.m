@@ -45,7 +45,7 @@
     for (NSString *classType in array)
     {
         Class clazz = NSClassFromString(classType);
-        if ([clazz conformsToProtocol:@protocol(XYAbstractCommand) ] && ![clazz conformsToProtocol:@protocol(XYCommand)])
+        if ([clazz conformsToProtocol:@protocol(XYCommand)])
         {
             mDic[[clazz performSelector:@selector(name)]] = classType;
         }

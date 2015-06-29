@@ -41,17 +41,29 @@
 #pragma mark - private
 - (void)buildChain
 {
-    NSArray *array = [NSClassFromString(self.classType) uxy_subClasses];
     NSMutableArray *mArray = [@[] mutableCopy];
     
+    Class clazz = NSClassFromString(self.classType);
+    [mArray addObject:[[clazz alloc] init]];
+    
+    
+    NSArray *array = [XYCommandLine uxy_subClasses];
     for (NSInteger i = 0; i < array.count; i++)
     {
-        XYCommandLine *commandName = [[NSClassFromString(array[i]) alloc] init];
+        Class subClazz = NSClassFromString(array[i]);
+        if (![subClazz conformsToProtocol:@protocol(XYCommandParam)])
+            continue;
+        
+        if (![[subClazz performSelector:@selector(name)] isEqualToString:[clazz performSelector:@selector(name)]])
+            continue;
+
+        XYCommandLine *commandLine = [[subClazz alloc] init];
         if (i > 0)
         {
-            ((XYCommandLine *)mArray[i - 1]).nextOperator = commandName;
+            ((XYCommandLine *)[mArray lastObject]).nextOperator = commandLine;
         }
-        [mArray addObject:commandName];
+        
+        [mArray addObject:commandLine];
     }
     
     self.commands = mArray;

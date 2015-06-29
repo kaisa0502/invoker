@@ -180,18 +180,18 @@
 		570C50741B3EB6440002A5DF /* commands */ = {
 			isa = PBXGroup;
 			children = (
-				57DC317A1B41218400D66F28 /* AbstractLog.h */,
-				57DC317B1B41218400D66F28 /* AbstractLog.m */,
 				57DC317D1B4121AF00D66F28 /* Log.h */,
 				57DC317E1B4121AF00D66F28 /* Log.m */,
+				57DC317A1B41218400D66F28 /* AbstractLog.h */,
+				57DC317B1B41218400D66F28 /* AbstractLog.m */,
 				57DC31801B4121BE00D66F28 /* LogA.h */,
 				57DC31811B4121BE00D66F28 /* LogA.m */,
 				57DC31831B4121CA00D66F28 /* LogB.h */,
 				57DC31841B4121CA00D66F28 /* LogB.m */,
-				57DC31861B41508A00D66F28 /* AbstractPrint.h */,
-				57DC31871B41508A00D66F28 /* AbstractPrint.m */,
 				57DC31891B4150B500D66F28 /* Print.h */,
 				57DC318A1B4150B500D66F28 /* Print.m */,
+				57DC31861B41508A00D66F28 /* AbstractPrint.h */,
+				57DC31871B41508A00D66F28 /* AbstractPrint.m */,
 			);
 			path = commands;
 			sourceTree = "<group>";

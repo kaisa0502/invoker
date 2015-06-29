@@ -10,13 +10,14 @@
 
 @implementation Log
 
++ (NSString *)name
+{
+    return @"log";
+}
+
 - (NSString *)echo:(XYCommandVO *)vo
 {
     return @"log";
 }
 
-- (BOOL)isOperate:(XYCommandVO *)vo
-{
-    return (vo.params.count == 0 && vo.datas.count == 0);
-}
 @end

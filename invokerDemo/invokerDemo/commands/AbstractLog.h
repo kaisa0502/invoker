@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "XYCommandLine.h"
 
-@interface AbstractLog : XYCommandLine <XYAbstractCommand>
+@interface AbstractLog : XYCommandLine 
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import "AbstractLog.h"
+#import "XYCommandLine.h"
 
-@interface Log : AbstractLog <XYCommand>
+@interface Log : XYCommandLine <XYCommand>
 
 @end

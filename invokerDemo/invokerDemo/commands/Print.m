@@ -10,6 +10,11 @@
 
 @implementation Print
 
++ (NSString *)name
+{
+    return @"print";
+}
+
 - (NSString *)echo:(XYCommandVO *)vo
 {
     NSMutableString *str = [@"print" mutableCopy];

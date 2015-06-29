@@ -8,6 +8,6 @@
 
 #import "XYCommandLine.h"
 
-@interface AbstractPrint : XYCommandLine <XYAbstractCommand>
+@interface AbstractPrint : XYCommandLine
 
 @end

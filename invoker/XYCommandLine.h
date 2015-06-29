@@ -9,8 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "XYCommandVO.h"
 
-@protocol XYAbstractCommand <NSObject> @end
-@protocol XYCommand <NSObject> @end
+@protocol XYCommandParam <NSObject>
++ (NSString *)name;
+- (NSString *)operateParam;
+@end
+
+@protocol XYCommand <NSObject>
++ (NSString *)name;
+@end
 
 @interface XYCommandLine : NSObject
 
@@ -21,10 +27,4 @@
 
 #pragma mark - rewirte method
 - (NSString *)echo:(XYCommandVO *)vo;
-
-// if you want respond this vo, return YES
-- (BOOL)isOperate:(XYCommandVO *)vo;
-
-+ (NSString *)name;
-
 @end

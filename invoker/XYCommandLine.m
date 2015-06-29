@@ -30,6 +30,11 @@
     return YES;
 }
 
+- (NSString *)operateParam
+{
+    return @"...";
+}
+
 + (NSString *)name
 {
     return NSStringFromClass(self);
@@ -40,10 +45,9 @@
 {
     NSString *result = @"";
     
-    if (self.enabled && [self isOperate:vo])
+    if (self.enabled && ([vo.params containsObject:[self operateParam]] || [[self operateParam] isEqualToString:@"..."]))
     {
         result = [self echo:vo];
-        return result;
     }
     
     if (self.nextOperator)

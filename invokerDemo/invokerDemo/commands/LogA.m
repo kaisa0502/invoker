@@ -15,13 +15,9 @@
     return @"log -a";
 }
 
-- (BOOL)isOperate:(XYCommandVO *)vo
+- (NSString *)operateParam
 {
-    if (vo.params.count != 1) return NO;
-    
-    if (![vo.params containsObject:@"-a"]) return NO;
-    
-    return YES;
+    return @"-a";
 }
 
 @end
