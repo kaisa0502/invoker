@@ -66,7 +66,7 @@
 - (void)test4 {
     // This is an example of a functional test case.
     NSString *str = [_invoker exec:@"log -b"];
-    XCTAssert([str isEqualToString:@"log -b "], @"Pass");
+    XCTAssert([str isEqualToString:@"log -b"], @"Pass");
 }
 
 - (void)test5 {
