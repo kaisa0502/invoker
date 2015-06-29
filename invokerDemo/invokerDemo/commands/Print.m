@@ -1,30 +1,29 @@
 //
-//  LogB.m
+//  Print.m
 //  invokerDemo
 //
 //  Created by heaven on 15/6/29.
 //  Copyright (c) 2015年 XingYao. All rights reserved.
 //
 
-#import "LogB.h"
+#import "Print.h"
 
-@implementation LogB
+@implementation Print
 
 - (NSString *)echo:(XYCommandVO *)vo
 {
-    NSMutableString *str = [@"log -b" mutableCopy];
+    NSMutableString *str = [@"print" mutableCopy];
     if (vo.datas.count > 0)
         [str appendFormat:@" %@", vo.datas[0]];
-
+    
+    if (vo.params.count > 0)
+        [str appendFormat:@" %@", vo.params];
+    
     return str;
 }
 
 - (BOOL)isOperate:(XYCommandVO *)vo
 {
-    if (vo.params.count != 1) return NO;
-    
-    if (![vo.params containsObject:@"-b"]) return NO;
-    
     return YES;
 }
 

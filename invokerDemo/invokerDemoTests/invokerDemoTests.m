@@ -75,6 +75,17 @@
     XCTAssert([str isEqualToString:@"log -b data"], @"Pass");
 }
 
+- (void)test6 {
+    // This is an example of a functional test case.
+    NSString *str = [_invoker exec:@"print"];
+    XCTAssert([str isEqualToString:@"print"], @"Pass");
+}
+
+- (void)test7 {
+    // This is an example of a functional test case.
+    NSString *str = [_invoker exec:@"print -x -y"];
+    XCTAssert(str.length > 0, @"Pass");
+}
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.

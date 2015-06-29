@@ -15,7 +15,6 @@
     return @"log -a";
 }
 
-// if you want respond this vo, return YES
 - (BOOL)isOperate:(XYCommandVO *)vo
 {
     if (vo.params.count != 1) return NO;

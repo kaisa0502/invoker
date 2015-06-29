@@ -24,6 +24,8 @@
 		57DC317F1B4121AF00D66F28 /* Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC317E1B4121AF00D66F28 /* Log.m */; };
 		57DC31821B4121BE00D66F28 /* LogA.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC31811B4121BE00D66F28 /* LogA.m */; };
 		57DC31851B4121CA00D66F28 /* LogB.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC31841B4121CA00D66F28 /* LogB.m */; };
+		57DC31881B41508A00D66F28 /* AbstractPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC31871B41508A00D66F28 /* AbstractPrint.m */; };
+		57DC318B1B4150B500D66F28 /* Print.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC318A1B4150B500D66F28 /* Print.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,10 @@
 		57DC31811B4121BE00D66F28 /* LogA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogA.m; sourceTree = "<group>"; };
 		57DC31831B4121CA00D66F28 /* LogB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogB.h; sourceTree = "<group>"; };
 		57DC31841B4121CA00D66F28 /* LogB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogB.m; sourceTree = "<group>"; };
+		57DC31861B41508A00D66F28 /* AbstractPrint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractPrint.h; sourceTree = "<group>"; };
+		57DC31871B41508A00D66F28 /* AbstractPrint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractPrint.m; sourceTree = "<group>"; };
+		57DC31891B4150B500D66F28 /* Print.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Print.h; sourceTree = "<group>"; };
+		57DC318A1B4150B500D66F28 /* Print.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Print.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +188,10 @@
 				57DC31811B4121BE00D66F28 /* LogA.m */,
 				57DC31831B4121CA00D66F28 /* LogB.h */,
 				57DC31841B4121CA00D66F28 /* LogB.m */,
+				57DC31861B41508A00D66F28 /* AbstractPrint.h */,
+				57DC31871B41508A00D66F28 /* AbstractPrint.m */,
+				57DC31891B4150B500D66F28 /* Print.h */,
+				57DC318A1B4150B500D66F28 /* Print.m */,
 			);
 			path = commands;
 			sourceTree = "<group>";
@@ -287,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57DC317F1B4121AF00D66F28 /* Log.m in Sources */,
+				57DC31881B41508A00D66F28 /* AbstractPrint.m in Sources */,
 				570C506A1B3E98810002A5DF /* XYCommandConfig.m in Sources */,
 				570C50351B3E97510002A5DF /* ViewController.m in Sources */,
 				570C506D1B3E98B30002A5DF /* XYCommandVO.m in Sources */,
@@ -297,6 +308,7 @@
 				570C50321B3E97510002A5DF /* AppDelegate.m in Sources */,
 				570C50661B3E98540002A5DF /* XYCommand.m in Sources */,
 				570C50731B3E990C0002A5DF /* XYClassUtils.m in Sources */,
+				57DC318B1B4150B500D66F28 /* Print.m in Sources */,
 				57DC317C1B41218400D66F28 /* AbstractLog.m in Sources */,
 				570C502F1B3E97510002A5DF /* main.m in Sources */,
 			);

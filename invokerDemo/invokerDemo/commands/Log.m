@@ -15,7 +15,6 @@
     return @"log";
 }
 
-// if you want respond this vo, return YES
 - (BOOL)isOperate:(XYCommandVO *)vo
 {
     return (vo.params.count == 0 && vo.datas.count == 0);
